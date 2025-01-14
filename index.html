@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="icon" href="images/sun.ico" sizes="32x32">
+</head>
+
+<body class="body">
+
+  <!--------------------------- Loader ----------------------------------->
+  
+  <div class="loader">
+    <img src="images/sun.png">
+    <h3>Weather App</h3>
+  </div>
+  
+
+  <!--------------------------- Search bar ----------------------------------->
+
+  <div class="col-lg-8 mx-auto col- p-4 py-md-4">
+    <header class="d-flex align-items-center">
+      <div class="search">
+        <form>
+          <input title="Enter city name" class="search-in" type="text" placeholder="Enter city name...">
+          <span title="Search by voice" class="mic-btn"><i class=" fs-5 bi bi-mic"></i></span>
+          <span title="Search by location" class="loc-btn"><i class=" fs-5 bi bi-geo-alt"></i></span>
+          <button title="Search" class="search-btn" type="submit"><i class=" bi fs-5 bi-search"></i></button>
+        </form>
+      </div>
+    </header>
+    <hr>
+    <p class="error"></p>
+
+    <!------------------------- Main content ----------------------------->
+
+    <main>
+      <div class="center">
+        <div class="text">
+          Type any city name to check current weather
+          of that cityor click on the "Check weather
+           by current location" to check weather using
+          your current location.
+        </div>
+      </div>
+      <div class="weatherinfo">
+        <div class="d-flex justify-content-between">
+          <div>
+            <span class="fs-3 col-md-8  text-center">Weather - <span class="status">Status</span></span>
+            <p class="desc fs-5">Description</p>
+          </div>
+          <div>
+            <span class="day fs-4">Day</span>
+            <p class="time fs-4 text-end">time</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center t">
+          <img class="weather-img" src="images/sun.png">
+          <h1 class=" display-1 temp">Temp</h1>
+        </div>
+        <div class="display-3 city"><i class="bi bi-geo-alt-fill"></i>City Name</div>
+        <hr class="my-4">
+
+        <div class="info">
+          <div class="box">
+            <h6>Humidity</h6>
+            <i class="bi bi-droplet-half fs-4"></i><br>
+            <span class="humidity"></span>
+          </div>
+          <div class="box ">
+            <h6>Wind Speed</h6>
+            <i class="bi bi-wind fs-4"></i><br>
+            <span class="wind_speed"></span>
+          </div>
+          <div class="box ">
+            <h6>Sunrise</h6>
+            <i class="bi bi-sunrise fs-4"></i><br>
+            <span class="sunrise"></span>
+          </div>
+          <div class="box ">
+            <h6>Sunset</h6>
+            <i class="bi bi-sunset fs-4"></i><br>
+            <span class="sunset"></span>
+          </div>
+          <div class="box ">
+            <h6>Feels Like</h6>
+            <i class="bi bi-thermometer-sun fs-4"></i><br>
+            <span class="feels_like"></span>
+          </div>
+          <div class="box ">
+            <h6>Max Temp</h6>
+            <i class="bi bi-thermometer-high fs-4"></i><br>
+            <span class="max_temp"></span>
+          </div>
+          <div class="box ">
+            <h6>Min Temp</h6>
+            <i class="bi bi-thermometer fs-4"></i><br>
+            <span class="min_temp"></span>
+          </div>
+
+          <div class="box ">
+            <h6>Visibility</h6>
+            <i class="bi bi-eye fs-4"></i><br>
+            <span class="visibility"></span>
+          </div>
+          <div class="box ">
+            <h6>Pressure</h6>
+            <i class="bi bi-chevron-bar-contract fs-4"></i><br>
+            <span class="pressure"></span>
+          </div>
+          <div class="box ">
+            <h6>Cloudness</h6>
+            <i class="bi bi-clouds fs-4"></i><br>
+            <span class="clouds"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span>Data provided by <a href="https://openweathermap.org/">OpenWeather</a></span>
+    </footer>
+  </div>
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
